@@ -213,5 +213,13 @@ Q.E.D.
 
 17. `((p->q)->p)->p`
 ```
-TODO
+~p, (p->q)->p |- ~p->p->q  # ~p->p->q
+~p, (p->q)->p |- p->q  # DT
+~p, (p->q)->p |- (p->q)->p  # Id
+~p, (p->q)->p |- p  # MP
+(p->q)->p |- ~p->p  # DT
+(p->q)->p |- (~p->p)->p  # (~p->p)->p
+(p->q)->p |- p  # MP
+|- ((p->q)->p)->p  # DT
+Q.E.D.
 ```
