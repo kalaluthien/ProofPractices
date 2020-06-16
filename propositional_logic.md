@@ -193,7 +193,22 @@ Q.E.D.
 
 16. `(p->q)->(~p->q)->q`
 ```
-TODO
+~q, p->q, ~p->q |- ~q  # Id
+~q, p->q, ~p->q |- p->q  # Id
+~q, p->q, ~p->q |- (p->q)->(~q->~p)  # (p->q)->(~q->~p)
+~q, p->q, ~p->q |- ~q->~p  # MP
+~q, p->q, ~p->q |- ~p  # MP
+~q, p->q, ~p->q |- ~p->q  # Id
+~q, p->q, ~p->q |- (~p->q)->(~q->p)  # (~p->q)->(~q->p)
+~q, p->q, ~p->q |- ~q->p  # MP
+~q, p->q, ~p->q |- p  # MP
+~q, p->q, ~p->q |- q  # MP
+p->q, ~p->q |- ~q->q  # DT
+p->q, ~p->q |- (~q->q)->q  # (~p->p)->p
+p->q, ~p->q |- q  # MP
+p->q |- (~p->q)->q  # DT
+|- (p->q)->(~p->q)->q  # DT
+Q.E.D.
 ```
 
 17. `((p->q)->p)->p`
