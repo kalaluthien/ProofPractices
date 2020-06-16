@@ -1,4 +1,4 @@
-# Zeroth order logic groceries
+# Propositional logic groceries
 
 ## Logical operator
 1. `A->B`
