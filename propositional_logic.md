@@ -228,6 +228,20 @@ Q.E.D.
 
 19. `((p->q)->r)->(p->r)->r`
 ```
+p, p->r, (p->q)->r, r->q |- p  # Id
+p, p->r, (p->q)->r, r->q |- p->r  # Id
+p, p->r, (p->q)->r, r->q |- r  # MP
+p, p->r, (p->q)->r, r->q |- r->q  # Id
+p, p->r, (p->q)->r, r->q |- q  # MP
+p->r, (p->q)->r, r->q |- p->q  # DT
+p->r, (p->q)->r, r->q |- (p->q)->r  # Id
+p->r, (p->q)->r, r->q |- r  # MP
+p->r, (p->q)->r |- (r->q)->r  # DT
+p->r, (p->q)->r |- ((r->q)->r)->r  # ((p->q)->p)->p
+p->r, (p->q)->r |- r  # MP
+(p->q)->r |- (p->r)->r  # DT
+|- ((p->q)->r)->(p->r)->r  # DT
+Q.E.D.
 ```
 
 20. `(((p->q)->r)->s)->(q->r)->(p->s)`
