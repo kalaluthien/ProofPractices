@@ -13,7 +13,7 @@
 1. `T |- p` and `T |- p->q` then `T |- q` (modus ponens)
 2. `T |- p->q` if and only if `T+{p} |- q` (deduction theorem)
 
-## Theorem
+# Theorems
 1. `p->(p->q)->q`
 ```
 p, p->q |- p  # Id
